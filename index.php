@@ -18,7 +18,7 @@ function GetCurVal( $sKey, $sVal = '' )
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
-		<title>1eye.io - Form test</title>
+	<title>1eye.io - Form test</title>
 		
         <meta name="robots" content="noindex, nofollow">
         <link rel="icon" href="favicon.ico">
@@ -32,18 +32,18 @@ function GetCurVal( $sKey, $sVal = '' )
         <![endif]-->
         
         <link href='//fonts.googleapis.com/css?family=Work+Sans:400,300,600' rel='stylesheet' type='text/css'>
-		<link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
         <style>
             *, body
             {
                 font-family:'Work Sans';
             }
             
-			pre
-			{
+	    pre
+	    {
                 font-family:'Inconsolata';
-				color:#660000;
-			}
+		color:#660000;
+	    }
         </style>
     </head>
     <body>
