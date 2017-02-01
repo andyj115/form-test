@@ -80,8 +80,8 @@ function GetCurVal( $sKey, $sVal = '' )
                             <div class='form-group'>
                                 <div class='col-sm-offset-2 col-sm-10'>
                                 <div class='checkbox'>
-                                    <label>
-                                    <input type='checkbox' id='remember' value='<?= GetCurVal('remember') ?>'> Remember me
+                                    <label for='remember'>
+                                    <input type='checkbox' id='remember' name='remember' value='<?= GetCurVal('remember') ?>'> Remember me
                                     </label>
                                 </div>
                                 </div>
@@ -104,7 +104,7 @@ function GetCurVal( $sKey, $sVal = '' )
         <script>
             $(document).ready(function() {
 
-                $('input:text').each(function() {
+                $('input').each(function() {
                     $(this).on('change', function() {
                         console.log( 'Store ID ' + $(this).attr('id') + ': ' + $(this).val() );            
                         $.post({
