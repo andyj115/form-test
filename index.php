@@ -101,52 +101,7 @@ function GetCurVal( $sKey, $sVal = '' )
 
         <script src='//code.jquery.com/jquery-3.1.1.min.js'></script>
         <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
-        <script>
-            $(document).ready(function() {
-
-                $('input').each(function() {
-                    $(this).on('change', function() {
-                        console.log( 'Store ID ' + $(this).attr('id') + ': ' + $(this).val() );            
-                        $.post({
-                            url: 'api/',
-                            data: {
-                                id: $(this).attr('id'),
-                                val: $(this).val()
-                            }
-                        });
-                    });
-                });
-
-                $('input:checkbox').each(function() {
-                    $(this).change(function () {
-                        var name = $(this).attr('id');
-                        var check = $(this).attr('checked');
-                        console.log( 'Change ID ' + name + ' to ' + check );
-                    });
-                });
-
-                $('#ok').on('click', function() {
-                    $('input').each(function() {
-                        console.log( ' - ID ' + $(this).attr('id') + ': ' + $(this).val() );            
-                        $.post({
-                            url: 'api/',
-                            data: {
-                                id: $(this).attr('id'),
-                                val: $(this).val()
-                            }
-                        });
-                    });
-                    console.log( 'Ok, go on!!' );            
-                    $.post({
-                        url: 'api/',
-                        data: {
-                            ok: true
-                        }
-                    });
-                });
-                
-            });
-        </script>
+        <script src='js/api.js'></script>
         
     </body>
 </html>
