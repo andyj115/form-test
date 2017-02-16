@@ -15,7 +15,7 @@ $(document).ready(function() {
             $.post({
                 url: 'api/',
                 data: {
-                    id: $(this).attr('id'),
+                    id:  $(this).attr('id'),
                     val: $(this).val()
                 }
             }).done(function( data ) {
@@ -30,7 +30,7 @@ $(document).ready(function() {
 
     $('input:checkbox').each(function() {
         $(this).change(function () {
-            var name = $(this).attr('id');
+            var name =  $(this).attr('id');
             var check = $(this).attr('checked');
             console.log( 'Change ID ' + name + ' to ' + check );
         });

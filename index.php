@@ -32,7 +32,7 @@ function GetCurVal( $sKey, $sVal = '' )
         <![endif]-->
         
         <link href='//fonts.googleapis.com/css?family=Work+Sans:400,300,600' rel='stylesheet' type='text/css'>
-	<link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	    <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
         <style>
             *, body
             {
