@@ -11,6 +11,7 @@ function GetCurVal( $sKey, $sVal = '' )
 
     return $sVal;
 }
+
 ?><!DOCTYPE html>
 <html lang='en'>
     <head>
@@ -18,32 +19,23 @@ function GetCurVal( $sKey, $sVal = '' )
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
     
-	<title>1eye.io - Form test</title>
+    	<title>Form test</title>
 		
         <meta name='robots' content='noindex, nofollow'>
         <link rel='icon' href='favicon.ico'>
 
-        <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-        <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
-        
-        <!--[if lt IE 9]>
-            <script src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'></script>
-            <script src='//oss.maxcdn.com/respond/1.4.2/respond.min.js'></script>
-        <![endif]-->
-        
-        <link href='//fonts.googleapis.com/css?family=Work+Sans:400,300,600' rel='stylesheet' type='text/css'>
-	    <link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Work+Sans:400,300,600'>
+	    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Inconsolata'>
         <style>
-            *, body
-            {
+            *, body {
                 font-family:'Work Sans';
             }
             
-	    pre
-	    {
+            pre {
                 font-family:'Inconsolata';
-		color:#660000;
-	    }
+                color:#660000;
+            }
         </style>
     </head>
     <body>
@@ -56,13 +48,13 @@ function GetCurVal( $sKey, $sVal = '' )
                             <div class='form-group'>
                                 <label for='inputEmail3' class='col-sm-2 control-label'>Email</label>
                                 <div class='col-sm-10'>
-                                <input type='email' class='form-control' id='inputEmail3' placeholder='Email' value='<?= GetCurVal('inputEmail3') ?>'>
+                                <input type='email' class='form-control' id='email' placeholder='Email' value='<?= GetCurVal('email') ?>'>
                                 </div>
                             </div>
                             <div class='form-group'>
                                 <label for='inputPassword3' class='col-sm-2 control-label'>Password</label>
                                 <div class='col-sm-10'>
-                                <input type='text' class='form-control' id='inputPassword3' placeholder='Password' value='<?= GetCurVal('inputPassword3') ?>'>
+                                <input type='password' class='form-control' id='pwd' placeholder='Password' value='<?= GetCurVal('pwd') ?>'>
                                 </div>
                             </div>
                             <div class='form-group'>
@@ -78,17 +70,45 @@ function GetCurVal( $sKey, $sVal = '' )
                                 </div>
                             </div>
                             <div class='form-group'>
-                                <div class='col-sm-offset-2 col-sm-10'>
-                                <div class='checkbox'>
-                                    <label for='remember'>
-                                    <input type='checkbox' id='remember' name='remember' value='<?= GetCurVal('remember') ?>'> Remember me
-                                    </label>
-                                </div>
+                            <label for='address' class='col-sm-2 control-label'>Notes</label>
+                                <div class='col-sm-10'>
+                                <textarea class='form-control' id='notes' placeholder='notes'><?= GetCurVal('address') ?></textarea>
                                 </div>
                             </div>
                             <div class='form-group'>
                                 <div class='col-sm-offset-2 col-sm-10'>
-                                    <button type='button' class='btn btn-default' id='ok'>Sign in</button>
+                                    <div class='checkbox'>
+                                        <label for='remember'>
+                                        <input type='checkbox' id='remember' name='remember' value='remember'> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='form-group'>
+                                <div class='col-sm-offset-2 col-sm-10'>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                        Default radio
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                        Second default radio
+                                        </label>
+                                    </div>
+                                    <div class="form-check disabled">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                                        <label class="form-check-label" for="exampleRadios3">
+                                        Disabled radio
+                                        </label>
+                                    </div>                            
+                                </div>                            
+                            </div>                            
+                            <div class='form-group'>
+                                <div class='col-sm-offset-2 col-sm-10'>
+                                    <button type='button' class='btn btn-primary' id='ok'>Sign in</button>
                                     <i>(check events in javascript console)</i>
                                 </div>
                             </div>
@@ -99,9 +119,10 @@ function GetCurVal( $sKey, $sVal = '' )
             </section>
         </section>
 
-        <script src='//code.jquery.com/jquery-3.1.1.min.js'></script>
-        <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
-        <script src='js/api.js'></script>
+        <script src='//code.jquery.com/jquery-3.3.1.min.js'></script>
+        <script src='//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+        <script src='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+        <script src='js/ajax.js?v=<?= filemtime( __DIR__ . '/js/ajax.js' ) ?>'></script>
         
     </body>
 </html>
