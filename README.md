@@ -7,4 +7,3 @@ general study purpose:
   
 this code, made in PHP and jQuery, have the purpose to save into the server the data typed by the user from the main page
 
-test link: [1eye.io/github/form-test](http://1eye.io/github/form-test)
